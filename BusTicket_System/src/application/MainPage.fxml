@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="683.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainPageController">
+   <children>
+      <SplitPane dividerPositions="0.1506276150627615" layoutX="275.0" layoutY="95.0" orientation="VERTICAL" prefHeight="480.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="392.0" prefWidth="638.0">
+               <children>
+                  <Label layoutX="25.0" layoutY="15.0" prefHeight="51.0" prefWidth="227.0" style="-fx-font-style: italic; -fx-font-size: 20;" text="BUS TICKET SYSTEM" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="304.0" prefWidth="638.0">
+               <children>
+                  <TabPane fx:id="MainTab" layoutX="137.0" layoutY="58.0" prefHeight="391.0" prefWidth="638.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <tabs>
+                      <Tab fx:id="tabReservation" onSelectionChanged="#Reservation" text="Reservation">
+                           <content>
+                              <AnchorPane fx:id="ReservationPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="638.0">
+                                 <children>
+                                    <Label layoutX="46.0" layoutY="32.0" text="From" />
+                                    <Label layoutX="366.0" layoutY="32.0" text="To" />
+                                    <DatePicker fx:id="dateBusDate" layoutX="232.0" layoutY="63.0" />
+                                    <Label layoutX="194.0" layoutY="67.0" text="Date" />
+                                    <Button fx:id="btnSearch" layoutX="259.0" layoutY="98.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="121.0" text="SEARCH" />
+                                    <ScrollPane fx:id="SeatScrollPane" layoutX="87.0" layoutY="193.0" prefHeight="246.0" prefWidth="508.0" visible="false">
+                                       <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="233.0" prefWidth="793.0">
+                                             <children>
+                                                <HBox layoutX="14.0" layoutY="82.0" prefHeight="45.0" prefWidth="696.0">
+                                                   <children>
+                                                      <Button fx:id="btn2" layoutX="44.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="2">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn5" layoutX="104.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="5">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn8" layoutX="158.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="8">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn11" layoutX="211.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="11">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn14" layoutX="266.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="14">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn17" layoutX="320.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="17">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn251211" layoutX="375.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="Button" visible="false">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn21" layoutX="424.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="21">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn24" layoutX="531.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="24">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn27" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="27">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn30" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="30">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn33" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="33">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn36" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="36">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets right="2.0" />
+                                                   </padding>
+                                                </HBox>
+                                                <HBox layoutX="14.0" layoutY="182.0" prefHeight="45.0" prefWidth="680.0">
+                                                   <children>
+                                                      <Button fx:id="btn1" layoutX="44.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="1">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn4" layoutX="104.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="4">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn7" layoutX="158.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="7">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn10" layoutX="211.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="10">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn13" layoutX="266.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="13">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn16" layoutX="320.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="16">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn19" layoutX="375.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="19">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn20" layoutX="424.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="20">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn23" layoutX="531.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="23">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn26" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="26">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn29" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="29">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn32" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="32">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn35" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="35">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets right="2.0" />
+                                                   </padding>
+                                                </HBox>
+                                                <HBox layoutX="14.0" layoutY="24.0" prefHeight="48.0" prefWidth="821.0">
+                                                   <children>
+                                                      <Button fx:id="btn3" layoutX="44.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="3">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn6" layoutX="104.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="6">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn9" layoutX="158.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="9">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn12" layoutX="211.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="12">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn15" layoutX="266.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="15">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn18" layoutX="320.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="18">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn25121" layoutX="375.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="Button" visible="false">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn22" layoutX="424.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="22">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn25" layoutX="531.0" layoutY="183.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="25">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn28" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="28">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn31" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="31">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn34" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="34">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="btn37" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="40.0" text="37">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets right="2.0" />
+                                                   </padding>
+                                                </HBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </ScrollPane>
+                                    <ComboBox fx:id="cmbFrom" layoutX="82.0" layoutY="28.0" prefWidth="150.0" />
+                                    <ComboBox fx:id="cmbTo" layoutX="397.0" layoutY="28.0" prefWidth="150.0" />
+                                    <ComboBox fx:id="cmbSearch" layoutX="184.0" layoutY="143.0" onAction="#cmbSelected" onInputMethodTextChanged="#cmbSelected" prefHeight="25.0" prefWidth="271.0" />
+                                    <AnchorPane fx:id="AnchorPanelYolcu" layoutX="100.0" layoutY="193.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="299.0" prefWidth="439.0" visible="false">
+                                       <children>
+                                          <Label layoutX="80.0" layoutY="72.0" text="Name" />
+                                          <Label layoutX="60.0" layoutY="117.0" text="Surname" />
+                                          <Label layoutX="81.0" layoutY="25.0" text="TCKN" />
+                                          <TextField fx:id="txtSurname" layoutX="138.0" layoutY="112.0" />
+                                          <TextField fx:id="txtTCKN" layoutX="138.0" layoutY="20.0" />
+                                          <TextField fx:id="txtName" layoutX="138.0" layoutY="67.0" />
+                                          <Button fx:id="btnBuyTic" layoutX="131.0" layoutY="223.0" mnemonicParsing="false" onAction="#BuyClicked" text="Buy Ticket" />
+                                          <Label layoutX="86.0" layoutY="163.0" text="SEX" />
+                                          <CheckBox fx:id="chcKadin" layoutX="138.0" layoutY="163.0" mnemonicParsing="false" text="KADIN" />
+                                          <CheckBox fx:id="chcErkek" layoutX="255.0" layoutY="163.0" mnemonicParsing="false" text="ERKEK" />
+                                          <Button fx:id="btnCancel" layoutX="246.0" layoutY="223.0" mnemonicParsing="false" onAction="#CancelClicked" text="Cancel" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                      </Tab>
+                      <Tab fx:id="tabBusManagement" onSelectionChanged="#BusMSystem" text="Bus Management">
+                        <content>
+                          <AnchorPane fx:id="paneBus" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField fx:id="txtModel" layoutX="217.0" layoutY="107.0" />
+                                    <TextField fx:id="txtPlate" layoutX="217.0" layoutY="65.0" />
+                                    <Label layoutX="116.0" layoutY="112.0" text="Bus Model:" />
+                                    <Label layoutX="126.0" layoutY="70.0" text="Bus Plate:" />
+                                    <Button fx:id="btnAddBus" layoutX="450.0" layoutY="77.0" mnemonicParsing="false" onAction="#AddBus" prefHeight="39.0" prefWidth="120.0" style="-fx-background-color: lightgreen;" text="ADD BUS">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Button>
+                                    <Label layoutX="249.0" layoutY="277.0" prefHeight="32.0" prefWidth="140.0" text="JOURNEY LIST">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="cmbBus" layoutX="89.0" layoutY="226.0" onAction="#cmbBusSelect" prefHeight="31.0" prefWidth="361.0" promptText="Please Choose a Bus" visibleRowCount="3" />
+                                    <ListView fx:id="lstJourney" layoutY="309.0" prefHeight="229.0" prefWidth="638.0" />
+                                    <Button fx:id="btnDeleteBus" disable="true" layoutX="450.0" layoutY="218.0" mnemonicParsing="false" onAction="#DeleteBus" prefHeight="39.0" prefWidth="128.0" style="-fx-background-color: red;" text="DELETE BUS" textFill="#2a3924">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Button>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab fx:id="tabAdminPanel" onSelectionChanged="#AdminPanel" text="Admin Panel">
+                          <content>
+                            <AnchorPane fx:id="paneAdmin" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                          </content>
+                        </Tab>
+                        <Tab fx:id="tabTickets" onSelectionChanged="#Tickets" text="Tickets">
+                           <content>
+                              <AnchorPane fx:id="paneTickets" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="btnTicketDelete" layoutX="256.0" layoutY="332.0" mnemonicParsing="false" onAction="#DeleteTicket" prefHeight="31.0" prefWidth="142.0" style="-fx-background-color: red;" text="DELETE TICKET" textFill="WHITE" />
+                                    <VBox layoutX="238.0" layoutY="130.0" prefHeight="185.0" prefWidth="286.0" spacing="20.0">
+                                       <children>
+                                          <Label fx:id="lblTicketName" layoutX="98.0" layoutY="111.0" text="-" />
+                                          <Label fx:id="lblTicketfto" layoutX="102.0" layoutY="146.0" text="-" />
+                                          <Label fx:id="lblTicketTime" text="-" />
+                                          <Label fx:id="lblTicketDate" text="-" />
+                                          <Label fx:id="lblTicketPrice" layoutX="101.0" layoutY="225.0" text="-" />
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="TOP_RIGHT" layoutX="163.0" layoutY="130.0" spacing="20.0">
+                                       <children>
+                                          <Label layoutX="98.0" layoutY="111.0" text="Name:" />
+                                          <Label layoutX="102.0" layoutY="146.0" text="From-To:" />
+                                          <Label text="Time:" />
+                                          <Label text="Date:" />
+                                          <Label layoutX="101.0" layoutY="225.0" text="Price:" />
+                                       </children>
+                                    </VBox>
+                                    <HBox alignment="CENTER" layoutX="149.0" layoutY="57.0" spacing="30.0">
+                                       <children>
+                                          <Label layoutX="54.0" layoutY="52.0" text="TCKN">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txtTicket" layoutX="104.0" layoutY="49.0" prefHeight="25.0" prefWidth="181.0" />
+                                          <Button fx:id="btnFind" layoutX="312.0" layoutY="49.0" mnemonicParsing="false" onAction="#TicketFind" style="-fx-background-color: lightgreen;" text="FIND" />
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </HBox>
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
